@@ -77,7 +77,7 @@ def get_invited_people(id):
     try:
         conn = get_db()
         cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT id, display_name, people_confirmed, people_invited FROM rsvp where id = %s", (id,))
+        cursor.execute("SELECT id, display_name, people_confirmed, people_invited, rsvped FROM rsvp where id = %s", (id,))
         result = cursor.fetchone()
 
         return jsonify(result)

@@ -39,9 +39,12 @@ const RsvpForm = () => {
             .then(data => {
                 setMaxPeople(data.people_invited);
                 setPeopleConfirmed(data.people_confirmed || 0);
-                setIsAttending(data.people_confirmed > 0 ? 1 : (data.people_confirmed === 0 ? 2 : 0)); // set attending status
-                setPreviousRsvp(data.hasOwnProperty('people_confirmed') ? data.people_confirmed : null);
+                setIsAttending(data.rsvped ? (data.people_confirmed === 0 ? 2 : 1) : 0); // set attending status
+                setPreviousRsvp(data.rsvped ? data.people_confirmed : null);
                 setStep(2);
+                if (data.rsvped && data.people_confirmed > 0) {
+                    setIsAttending(1);
+                }
         });
 };
 
@@ -149,6 +152,9 @@ const RsvpForm = () => {
                                 onClick={() => {
                                     setIsAttending(1);
                                 }}
+                                disableRipple
+                                disableFocusRipple
+                                disableTouchRipple
                             >
                                 Attending
                             </Button>
@@ -160,6 +166,9 @@ const RsvpForm = () => {
                                     borderColor: '#b29e66',
                                 }}
                                 onClick={() => setIsAttending(2)}
+                                disableRipple
+                                disableFocusRipple
+                                disableTouchRipple
                             >
                                 Not Attending
                             </Button>

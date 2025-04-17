@@ -22,16 +22,6 @@ function App() {
                             <Route path="/" element={<RsvpForm />} />
                             <Route path="/summary" element={<Summary />} />
                         </Routes>
-                        <footer style={{
-                            marginTop: '40px',
-                            padding: '20px',
-                            fontFamily: 'Georgia, serif',
-                            fontSize: '14px',
-                            color: '#b29e66',
-                            backgroundColor: '#fff9ef'
-                        }}>
-                            © {new Date().getFullYear()} Jaivik & Aayushi. All rights reserved.
-                        </footer>
                     </div>
                 </div>
             </div>
