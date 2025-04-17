@@ -1,0 +1,12 @@
+.header {
+    background-color: #d8c183;
+    height: 30px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+    font-weight: 900;
+    font-size: 18px;
+    
+}

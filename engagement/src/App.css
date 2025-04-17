@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.floral{
+  width: 100%;
+  rotate: 180deg;
+  aspect-ratio: auto;
+}
+.floral{
+  width: 100%;
+  aspect-ratio: auto;
+}
+
+.proposal{
+  width: 70%;
+  aspect-ratio: auto;
+  border-radius: 10px; 
+}
+body, html {
+  
+  background-color: #fbf6ed; 
+}
