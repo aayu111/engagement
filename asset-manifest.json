@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/aayu111/engagement.git/static/css/main.28aac70a.css",
+    "main.js": "/aayu111/engagement.git/static/js/main.836f1d6e.js",
+    "static/js/453.5ada1ddb.chunk.js": "/aayu111/engagement.git/static/js/453.5ada1ddb.chunk.js",
+    "static/media/proposal.jpg": "/aayu111/engagement.git/static/media/proposal.6f45ae5365fc58013c7c.jpg",
+    "static/media/floral2.png": "/aayu111/engagement.git/static/media/floral2.edb9ffdaf8de49096507.png",
+    "index.html": "/aayu111/engagement.git/index.html",
+    "main.28aac70a.css.map": "/aayu111/engagement.git/static/css/main.28aac70a.css.map",
+    "main.836f1d6e.js.map": "/aayu111/engagement.git/static/js/main.836f1d6e.js.map",
+    "453.5ada1ddb.chunk.js.map": "/aayu111/engagement.git/static/js/453.5ada1ddb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28aac70a.css",
+    "static/js/main.836f1d6e.js"
+  ]
+}
