@@ -45,10 +45,14 @@ const Summary = () => {
             )}
 
             {summary && (
+
                 <div>
                     <h3>Total People Attending: {summary.total_attending}</h3>
+                    <h4>Total Families Attending: {summary.attending.length}</h4>
+
 
                     <div style={{ display: 'flex', gap: '40px', textAlign: 'left' }}>
+                        {/* Attending Table */}
                         {/* Attending Table */}
                         <div style={{ flex: 1 }}>
                             <h4>People Attending</h4>
@@ -69,6 +73,9 @@ const Summary = () => {
                                 </tbody>
                             </table>
                         </div>
+
+
+
 
                         {/* Not Attending Table */}
                         <div style={{ flex: 1 }}>
