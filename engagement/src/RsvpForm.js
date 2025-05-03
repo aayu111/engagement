@@ -34,7 +34,7 @@ const RsvpForm = () => {
     }
 
     const handleNext = () => {
-        fetch(`http://192.168.1.216:7011/invited_people/${selectedId}`)
+        fetch(`https://playbook-server-68b4560dd77b.herokuapp.com/invited_people/${selectedId}`)
             .then(res => res.json())
             .then(data => {
                 setMaxPeople(data.people_invited);
@@ -48,13 +48,13 @@ const RsvpForm = () => {
         });
 };
 
-    const handleSubmit = () => {
-        fetch('http://192.168.1.216:7011/rsvp', {
+    const handleSubmit = (notComing=false) => {
+        fetch('https://playbook-server-68b4560dd77b.herokuapp.com/rsvp', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 id: selectedId,
-                people_confirmed: peopleConfirmed
+                people_confirmed: notComing ? 0 : peopleConfirmed
             })
         })
             .then(res => res.json())
@@ -73,7 +73,7 @@ const RsvpForm = () => {
             setDialogOpen(true);
         }
 
-        fetch('http://192.168.1.216:7011/search', {
+        fetch('https://playbook-server-68b4560dd77b.herokuapp.com/search', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ searchTerm: searchValue.trim() })
@@ -102,6 +102,9 @@ const RsvpForm = () => {
                         Contact Host
                     </a>
                 </p>
+                <p style={{ marginTop: '10px' , fontStyle: 'italic'}}>
+                    Dress Code: Traditional Indian Attire
+                    </p>
             </div>
 
             <Dialog fullWidth open={dialogOpen} onClose={() => handleDialogClose()}>
@@ -236,7 +239,7 @@ const RsvpForm = () => {
                             onClick={() => {
                                 if (isAttending === 2) {
                                     setPeopleConfirmed(0); // Not attending
-                                    handleSubmit();
+                                    handleSubmit(true);
                                 } else {
                                     if (peopleConfirmed === 0){
                                         alert("Please select atleast 1 person attending.")

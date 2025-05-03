@@ -1,6 +1,6 @@
 {
   "name": "engagement",
-  "homepage": "https://github.com/aayu111/engagement.git",
+  "homepage": "https://www.aayushijaivik.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,8 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.3.0",
+    "hash-router": "^0.4.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.0",

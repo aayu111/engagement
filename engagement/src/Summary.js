@@ -10,7 +10,7 @@ const Summary = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://192.168.1.216:7011/rsvp_summary?password=${password}`);
+            const res = await fetch(`https://playbook-server-68b4560dd77b.herokuapp.com/rsvp_summary?password=${password}`);
             const data = await res.json();
             if (res.status === 200) {
                 setSummary(data);
