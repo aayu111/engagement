@@ -118,17 +118,20 @@ def search():
         cursor.execute("SELECT * from rsvp")
         all_rows = cursor.fetchall()
 
+        # split the search term by spaces
+        searchterms = searchTerm.split(" ")
+
         required_data = []
+        for term in searchterms:
+            for row in all_rows:
+                people = ''
+                if row['display_name']:
+                    people = row['display_name']
+                
+                people = people.lower()
 
-        for row in all_rows:
-            people = ''
-            if row['display_name']:
-                people = row['display_name']
-            
-            people = people.lower()
-
-            if searchTerm in people:
-                required_data.append(row)
+                if term in people:
+                    required_data.append(row)
     
         return jsonify(required_data), 200
 
